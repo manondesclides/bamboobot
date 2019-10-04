@@ -9,7 +9,7 @@ def get_url():
     url = contents['url']
     return url
 
-def bop(bot, update):
+def bamboo(bot, update):
     url = get_url()
     chat_id = update.message.chat_id
     bot.send_photo(chat_id=chat_id, photo=url) 
@@ -18,7 +18,7 @@ def bop(bot, update):
 def main():
     updater = Updater('950468208:AAFagenhniR5_QnnIaPbPbiHOSBYmf1brGY')
     dp = updater.dispatcher
-    dp.add_handler(CommandHandler('bop',bop))
+    dp.add_handler(CommandHandler('bamboo',bamboo))
     updater.start_polling()
     updater.idle()
     
